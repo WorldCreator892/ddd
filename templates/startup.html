@@ -1,0 +1,29 @@
+ {% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<form action="/register" method="post" class="form-contact">
+<p><label>Наименование команды/организации: </label> <input type="text" name="name" value="" required />
+<p><label>Стадия готовности продукта: </label> <input type="text" name="email" value="" required />
+<p><label>Краткое описание продукта: </label> <input type="password" name="psw" value="" required />
+<p><label>Кейсы использования продукта: </label> <input type="password" name="psw2" value="" required />
+<p><label>Польза продукта: </label> <input type="text" name="name" value="" required />
+<p><label>Организация Московского транспорта, интересная в первую очередь: </label> <input type="text" name="email" value="" required />
+<p><label>Запрос к акселератору и видение пилотного проекта: </label> <input type="password" name="psw" value="" required />
+<p><label>Требуется ли сертификация продукта: </label> <input type="password" name="psw2" value="" required />
+<p><label>ФИО контактного лица по заявке: </label> <input type="password" name="psw2" value="" required />
+<p><label>Должность контактного лица: </label> <input type="text" name="name" value="" required />
+<p><label>Контактный телефон: </label> <input type="text" name="email" value="" required />
+<p><label>Контактная почта: </label> <input type="password" name="psw" value="" required />
+<p><label>Наименование юридического лица: </label> <input type="password" name="psw2" value="" required />
+<p><label>ИНН юридического лица: </label> <input type="password" name="psw2" value="" required />
+<p><label>Сколько человек в организации: </label> <input type="text" name="name" value="" required />
+<p><label>Сайт: </label> <input type="text" name="email" value="" required />
+<p><label>Откуда узнали про акселератор: </label> <input type="password" name="psw" value="" required />
+<p><label>Ссылка на презентацию: </label> <input type="password" name="psw2" value="" required />
+    <p><input type="submit" value="Подать заявку" />
+</form>
+{% endblock %}
